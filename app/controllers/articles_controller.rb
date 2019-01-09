@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    binding.pry
   end
 
   def new
@@ -27,7 +26,6 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     @article.update(params[:article])
-    binding.pry
     redirect_to article_path(@article)
   end
 end
